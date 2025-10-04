@@ -1,0 +1,39 @@
+{
+  '$jsonSchema': {
+    bsonType: 'object',
+    required: [
+      'userId',
+      'email',
+      'firstName',
+      'lastName',
+      'role'
+    ],
+    properties: {
+      userId: {
+        bsonType: 'string'
+      },
+      email: {
+        bsonType: 'string'
+      },
+      firstName: {
+        bsonType: 'string'
+      },
+      lastName: {
+        bsonType: 'string'
+      },
+      role: {
+        enum: [
+          'student',
+          'instructor',
+          'admin'
+        ]
+      },
+      dateJoined: {
+        bsonType: 'date'
+      },
+      isActive: {
+        bsonType: 'bool'
+      }
+    }
+  }
+}
