@@ -85,44 +85,6 @@ The text-based representation of the data model clearly shows the collections, t
                         +---------------------------+
 
 
-I cannot directly create an image or a visual diagram in this text-based interface. However, I can provide you with a text-based representation of the data model that clearly shows the collections, their key fields, and how they relate to each other. This is essentially a "diagram" in a textual format that you can understand and potentially convert into a visual diagram using a tool if needed.
-
-Here is the textual representation of your EduHub data model:
-
-+-------------------+       +-------------------+       +-------------------+
-|     users         |<-----|    courses        |<------|    enrollments    |
-|-------------------|       |-------------------|       |-------------------|
-| _id (ObjectId)    |       | _id (ObjectId)    |       | _id (ObjectId)    |
-| userId (string)   |       | courseId (string) |       | enrollmentId (str)|
-| email (string)    |       | title (string)    |       | studentId (string)| <-- references users.userId
-| firstName (string)|       | description (str) |       | courseId (string) | <-- references courses.courseId
-| lastName (string) |       | instructorId (str)|<--+   | enrollmentDate (dt)|
-| role (enum)       |       | category (string) |   |   | progress (number) |
-| dateJoined (dt)   |       | level (enum)      |   |   | completionDate (dt)|
-| profile (obj)     |       | duration (number) |   |   | status (enum)     |
-| isActive (boolean)|       | price (number)    |   |   |                   |
-+-------------------+       | tags ([string])   |   |   +-------------------+
-                            | createdAt (datetime)|   |
-                            | updatedAt (datetime)|   |
-                            | isPublished (boolean)|   |
-                            +-------------------+   |
-                                                    |
-                                                    |
-+-------------------+       +-------------------+   |   +-------------------+
-|     lessons       |<------|   assignments     |<--+   |   submissions     |
-|-------------------|       |-------------------|       |-------------------|
-| _id (ObjectId)    |       | _id (ObjectId)    |       | _id (ObjectId)    |
-| lessonId (string) |       | assignmentId (str)|       | submissionId (str)|
-| courseId (string) |<--+   | courseId (string) |<--+   | studentId (string)| <-- references users.userId
-| title (string)    |   |   | title (string)    |   |   | assignmentId (str)| <-- references assignments.assignmentId
-| content (string)  |   |   | description (str) |   |   | courseId (string) | <-- references courses.courseId
-| order (number)    |   |   | dueDate (datetime)|   |   | submissionDate (dt)|
-| createdAt (dt)    |   |   | maxScore (number) |   |   | grade (number)    |
-| updatedAt (dt)    |   |   +-------------------+   |   | feedback (string) |
-+-------------------+   |                           |   | submittedFile (str)|
-                        |                           |   +-------------------+
-                        +---------------------------+
-                        
 #How to interpret this diragram:
 
 -Boxes: Each box represents a MongoDB collection (e.g., users, courses).
