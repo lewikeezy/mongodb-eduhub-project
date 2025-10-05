@@ -1,6 +1,6 @@
 # MongoDB EduHub Project
 
-This repository contains a complete database backend system for **EduHub**, a fictional online e-learning platform. The project demonstrates a comprehensive understanding of MongoDB database concepts, from data modeling and CRUD operations to advanced querying, aggregation, and performance optimization. It is built using Python with the **PyMongo** library and showcases best practices for building a scalable and efficient NoSQL database solution.
+This repository contains a complete database backend system for **EduHub**, an online e-learning platform. The project demonstrates a comprehensive understanding of MongoDB database concepts, from data modeling and CRUD operations to advanced querying, aggregation, and performance optimization. It is built using Python with the **PyMongo** library and showcases best practices for building a scalable and efficient NoSQL database solution.
 
 ## Table of Contents
 
@@ -20,7 +20,6 @@ This repository contains a complete database backend system for **EduHub**, a fi
 
 The project simulates the data management challenges of a modern e-learning application. The primary goal is to design, implement, and optimize a robust MongoDB database for "EduHub" where students can enroll in courses, instructors can create content, and the system can track student progress and performance.
 
----
 
 ## Project Features
 
@@ -33,7 +32,6 @@ The database system is designed to support the following functional requirements
 * **Analytics and Reporting:** Generating key performance metrics, enrollment statistics, and revenue reports using aggregation pipelines.
 * **Search and Discovery:** Efficient course search functionality with filtering and sorting capabilities.
 
----
 
 ## Project Objectives
 
@@ -67,8 +65,7 @@ The text-based representation of the data model clearly shows the collections, t
                             | updatedAt (datetime)|   |
                             | isPublished (boolean)|   |
                             +-------------------+   |
-                                                    |
-                                                    |
+                                                    |                                               |
 +-------------------+       +-------------------+   |   +-------------------+
 |     lessons       |<------|   assignments     |<--+   |   submissions     |
 |-------------------|       |-------------------|       |-------------------|
@@ -143,7 +140,6 @@ It is highly recommended to use a virtual environment to manage project dependen
     pip install pymongo pandas jupyter
     ```
 
----
 
 ## How to Use
 
@@ -158,7 +154,6 @@ All project operations are demonstrated within a single Jupyter Notebook. To run
     ```
 5.  Run each cell sequentially to see the database creation, data population, CRUD operations, advanced queries, and performance analysis results.
 
----
 
 ## Database Schema
 
@@ -171,7 +166,6 @@ The database is composed of six main collections, with relationships maintained 
 * **`assignments`**: Holds details for course assignments, linked to a parent `course`.
 * **`submissions`**: Manages student submissions for assignments, referencing the `studentId` and `assignmentId`.
 
----
 
 ## Performance Analysis
 
@@ -180,13 +174,11 @@ To ensure efficient data retrieval, **indexing** was applied to key fields used 
 * **Query Explanations:** A breakdown of how each query works.
 * **Before/After Comparisons:** Analysis of query execution time using the `explain()` method to show the dramatic performance gains after index creation.
 
----
 
 ## Challenges and Solutions
 
 A primary challenge was designing the **document schema** to balance data integrity and flexibility. The solution was to use **manual referencing** for most one-to-many and many-to-many relationships, which avoids data duplication and simplifies updates. Another challenge involved creating **complex aggregation pipelines** for analytics, which was solved by carefully structuring the pipeline stages (`$match`, `$group`, `$lookup`, etc.) to process data efficiently.
 
----
 
 ## Deliverables
 
@@ -197,8 +189,6 @@ The final project includes the following files, committed to this repository:
 * `data/sample_data.json` (Exported sample data)
 * `docs/performance_analysis.md` (Detailed performance report)
 * `docs/presentation.pptx` (Brief design presentation)
-
----
 
 ## License
 
