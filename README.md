@@ -1,9 +1,29 @@
-# MongoDB EduHub Project
+### E-Learning Platform Database
+This project serves to consolidate and demonstrate a comprehensive understanding of MongoDB database concepts, operations, and best practices. Through building a real-world application database, showcasing  ability to design, implement, and optimize a NoSQL database solution that addresses practical business requirements.
 
+The project simulates the data management challenges faced by modern web applications, requiring one to think critically about data modeling, performance optimization, and scalability considerations that are essential in today’s technology landscape
+
+## MongoDB Eduhub
 This repository contains a complete database backend system for **EduHub**, an online e-learning platform. The project demonstrates a comprehensive understanding of MongoDB database concepts, from data modeling and CRUD operations to advanced querying, aggregation, and performance optimization. It is built using Python with the **PyMongo** library and showcases best practices for building a scalable and efficient NoSQL database solution.
 
-## Table of Contents
+## Technical Requirements
+Technical Requirements
 
+- MongoDB Version: v8.0 or higher 
+- Environment: MongoDB Compass (GUI) and MongoDB Shell (CLI)
+- Programming Language: Python with PyMongo library for MongoDB operations
+- Required Libraries: pymongo, pandas (for data manipulation), datetime (for date operations)
+- Documentation: Markdown format for all documentation
+- Data Format: JSON for data exports and imports
+- Query Execution: All queries and operations must be demonstrated in a Jupyter Notebook that shows both the executed Python code and their corresponding results/outputs
+
+
+## Table of Contents
+-
+- #E-Learning Platform Database
+- #MongoDB Eduhub
+- #Technical Requiremnts
+- #Table of Contents
 - #project-overview
 - #project-features
 - #project-objectives
@@ -46,7 +66,7 @@ By completing this project, the following proficiencies are demonstrated:
 
 
 ## Database Schema
-The text-based representation of the data model clearly shows the collections, their key fields, and how they relate to each other. Here is the textual representation of your EduHub data model:
+The text-based representation of the data model clearly shows the collections, their key fields, and how they relate to each other. The Schema Image can be vivwed in the presentaion.pptx file. Here is the textual representation of the EduHub data model below:
 
 +-------------------+       +-------------------+       +-------------------+
 |     users         |<-----|    courses        |<------|    enrollments    |
@@ -80,7 +100,6 @@ The text-based representation of the data model clearly shows the collections, t
 +-------------------+   |                           |   | submittedFile (str)|
                         |                           |   +-------------------+
                         +---------------------------+
-
 
 #How to interpret this diragram:
 
